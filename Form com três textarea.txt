@@ -13,8 +13,8 @@ End Sub
 
 'Loop por todos os componentes da tela
 'frmProntuario = Nome do UserForm atual
-'Plan1 = Nome da planilha aonde ir�o ser inseridos os valores
-'lColunaCodigo = Coluna de refer�ncia para a inser��o dos dados
+'Plan1 = Nome da planilha aonde irão ser inseridos os valores
+'lColunaCodigo = Coluna de referência para a inserção dos dados
 Public Function lsInserirTextBox(frmProntuario As UserForm, ByVal Plan1 As String, ByVal lColunaCodigo As Long)
     Dim controle            As Control
     Dim lUltimaLinhaAtiva   As Long
@@ -37,14 +37,14 @@ Public Function lsLimparTextBox(frmProntuario As UserForm)
     Next
 End Function
 
-'Aciona o bot�o de limpar
+'Aciona o botão de limpar
 Private Sub CommandButton1_Click()
     lsLimparTextBox frmProntuario
     
     TextBox1.SetFocus
 End Sub
 
-'Aciona o bot�o de inserir
+'Aciona o botão de inserir
 Private Sub CommandButton2_Click()
     lsInserirTextBox frmProntuario, "PRONTUARIO", 2
     
@@ -65,4 +65,11 @@ End Sub
 Private Sub TextBox3_Change()
     TextBox3 = UCase(TextBox3)
     'Ucase = Upper case
+End Sub
+
+======================================
+MÓDULOS
+'Ao clicar no botão, chamará esse módulo e consequentemente chamará o formulário
+Sub ChamarFormProntuario()
+    frmProntuario.Show
 End Sub
