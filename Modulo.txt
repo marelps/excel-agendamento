@@ -1,0 +1,3 @@
+Sub ChamarFormCadastro()
+    frmCadastro.Show
+End Sub
